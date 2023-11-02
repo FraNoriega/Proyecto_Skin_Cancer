@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Skin cancer Detection</title>
+    <link rel="stylesheet"  href="styles.css">
+
+  </head>
+  <body style="background-color: #f2f2f2; font-family: Arial, sans-serif;">
+    <div>
+      <h1 style="text-align: center;">Skin Cancer Detection</h1>
+      <p>El cáncer de piel es una enfermedad que se desarrolla en las células de la piel y es uno de los tipos más comunes de cáncer en todo el mundo. Se produce cuando las células cutáneas comienzan a crecer de manera anormal y descontrolada. El principal factor de riesgo para el cáncer de piel es la exposición excesiva a la radiación ultravioleta (UV) del sol o de fuentes artificiales, como las camas de bronceado. Por esta razón, el cáncer de piel a menudo se relaciona con la exposición prolongada al sol sin protección adecuada.</p>
+    </div>
+    <div style="display: flex;">
+      <div style="flex: 1;">
+        <div>
+          <input type="file" id="imagenInput">
+          <video id="video" autoplay style="display: none"></video>
+          <canvas id="canvas" width="100" height="100"></canvas>
+          <canvas id="othercanvas" width="100" height="100" style="display: none"></canvas>
+        </div>
+        <button onclick="predecir()" class="myButton">Predecir</button>
+      </div>
+      <div style="flex: 2;text-align: center">
+        <h2>¡Pulsa en predecir!</h2>
+        <div id="default">
+          <p>Hemos analizado 10 mil fotografías de lesiones y canceres de piel como:</p>
+          <ul style="list-style: none;">
+            <li style="margin: 10px 0;">Enfermedad de bowen</li>
+            <li style="margin: 10px 0;">Carcinoma de células basales</li>
+            <li style="margin: 10px 0;">Queratosis</li>
+            <li style="margin: 10px 0;">Dermatofibroma</li>
+            <li style="margin: 10px 0;">Melanoma</li>
+            <li style="margin: 10px 0;">Nevus melanocíticos</li>
+            <li style="margin: 10px 0;">Lesiones vasculares</li>
+          </ul>
+        </div>
+        <div id="infoDiv" style="display: none;">
+          <p id="message"></p>
+        </div>
+      </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
